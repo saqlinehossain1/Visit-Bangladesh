@@ -1,0 +1,127 @@
+.hero {
+  height: 600px;
+  background: linear-gradient(135deg, rgba(0, 106, 78, 0.8), rgba(244, 42, 65, 0.6)),
+              url('https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=1920') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-overlay {
+  text-align: center;
+  color: var(--white);
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: fadeInDown 1s ease;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  animation: fadeIn 1.5s ease;
+}
+
+.btn-explore {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(244, 42, 65, 0.4);
+}
+
+.btn-explore:hover {
+  background-color: #d12336;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(244, 42, 65, 0.5);
+}
+
+.btn-watch {
+  background-color: transparent;
+  color: var(--white);
+  padding: 15px 40px;
+  border: 2px solid var(--white);
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.btn-watch:hover {
+  background-color: var(--white);
+  color: var(--primary-color);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero {
+    height: 500px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .btn-explore,
+  .btn-watch {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+}
